@@ -1,0 +1,33 @@
+name: Controleer Luma
+on:
+  push:
+    branches: [main, luma-v5-flat-redesign]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Controleer broncode
+        run: |
+          node --check assets/engine.js
+          node --check assets/studio-art.js
+          node --check assets/studio.js
+          node --check sw.js
+      - name: Test puzzels, vormgeving en publicatie
+        run: node --test tests/*.test.cjs
+      - name: Verifieer de statische website
+        run: node scripts/prepare-pages.mjs
+      - name: Bewaar de gecontroleerde app
+        uses: actions/upload-artifact@v4
+        with:
+          name: luma-5.0-preview
+          path: _site
+          include-hidden-files: true
+          retention-days: 5

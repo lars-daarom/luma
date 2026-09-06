@@ -1,51 +1,47 @@
-# Luma 4.1.0
+# Luma 5.0
 
-Een kleine draai. Een wereld die opbloeit.
+Kleine draai. Nieuwe richting.
 
-Een volledige Nederlandse HTML5-puzzelgame met 72 campagnelevels, zes werelden, zeven plantenvrienden, een dagpuzzel, vrij spelen, een groeiende tuin, procedurele muziek en geluidseffecten.
+Een statische HTML5-puzzelgame met 72 campagnelevels, zes werelden, dagpuzzels, vrije puzzels en originele procedurele muziek. Versie 5 vervangt de mascottes door abstracte speelstukken en een helder flat-designsysteem.
 
-**Online zetten? Begin bij START-HIER.md.** Deze release gebruikt GitHub Actions, met de app in de hoofdmap van het uiteindelijke publicatie-artefact. Er is geen docs-kopie en er wordt geen Jekyll gestart.
+## De app
 
-## Wat is nieuw?
+`index.html` laadt `assets/engine.js`, `assets/studio-art.js`, `assets/studio.js` en `assets/studio.css`. Er zijn geen externe fonts, afbeeldingen, trackers of runtimepakketten nodig. Muziek begint na een gebruikershandeling.
 
-De karakters houden hun persoonlijkheid in de illustraties en tuin. Op het bord zijn het nu zeven herkenbare botanische symbolen zonder gezichten of lijfjes. Hun silhouetten keren terug in de hoofdstukiconen. De bron heeft een klein lichtzaadje, zodat de spelrol herkenbaar blijft.
+Terug maakt een draai ongedaan. Hint toont een volgende stap. Vonk laat je een tegel kiezen die automatisch goed wordt gezet. Hint en Vonk zijn onbeperkt; hulp levert 1 ster voor die poging op. Een eerder behaalde hogere score blijft bewaard. Alle levels zijn vrij te kiezen.
 
-De paadjes hebben een volledig dekkende basis en een dekkende lichte inleg. Elke pijp bestaat uit een doorlopende SVG-path per verflaag; ook de T-splitsingen. De rotatie wordt begrensd binnen de tegel en een kleine dekkende aansluitmarge voorkomt haarlijntjes aan tegelranden. Inactief betekent nu een rustigere volle kleur, niet transparantie.
+## Publiceren
 
-De levelselectie bestaat uit afgeronde rechthoekige kaarten. Voltooide levels houden hun nummer; de aanbevolen tegel heeft een volle achtergrond en een duidelijke status. Een hervat level heeft voorrang binnen de geselecteerde wereld.
+De bestaande GitHub Pages-publicatie vanaf `main` en `/ (root)` kan blijven staan. `.nojekyll` voorkomt verwerking door Jekyll. Wissel niet opnieuw naar `/docs`. Deze repository heeft geen dubbele docs-versie.
 
-Het appicoon is opnieuw gecomponeerd rond het gezicht en een enkel bloem-silhouet. Geen volledig landschap op 60 pixels. De bloemblaadjes delen dezelfde vormbasis met de illustraties en de spelbron.
+`.github/workflows/check.yml` controleert broncode, puzzels en alle releasebestanden; de workflow wijzigt geen Pages-instellingen en schrijft geen code terug. Het tijdelijke artifact `luma-5.0-preview` bevat de geverifieerde site.
 
-## Bestanden
+`controle.html` vergelijkt gepubliceerde bestanden met `release.json`. De Git-blobhashes zijn bedoeld om gemengde versies en ontbrekende bestanden te herkennen, niet als digitale handtekening.
 
-- `assets/app.js`: oorspronkelijke puzzelgenerator, audio, besturing, schermen en lokale voortgang.
-- `assets/worlds.js`: plantenvrienden, omgevingen, vectorillustraties, botanische symbolen en het appicoon.
-- `assets/app.css`: responsieve iPhone/iPad-interface en dekkende bordweergave.
-- `sw.js`, `manifest.webmanifest`: installatie- en offline-ondersteuning.
-- `controle.html`, `release.json`: online controle van de gepubliceerde bestanden.
-- `.github/workflows/pages.yml`, `scripts/prepare-pages.mjs`: echte statische Pages-deployment met voorafgaande controles.
-- `branding/`: de eigen SVG-karakters, symbolen en een 1024px appicoon.
-- `tests/`: reproduceerbare logica-, publicatie- en UI-tests.
-- `QA.md`: uitgevoerde controles, uitslagen en expliciete beperkingen.
+## Ontwikkelen en controleren
 
-Geen externe runtime-afhankelijkheden, trackers of lettertypedownloads. Alle interface-iconen zijn vectoren, geen Unicode-emoji. De beweging kan worden verminderd en geluid kan apart worden uitgezet.
+Gebruik Node 22 of nieuwer en een eenvoudige HTTP-server.
 
-## Voortgang
-
-De opslagcode en sleutel `luma.save.v1` zijn behouden. Alle 72 campagnepuzzels behouden hun oorspronkelijke signatures. Gebruik dezelfde origin en projectroute om eerder opgeslagen voortgang te behouden. Andere browsers, privevensters, domeinen en verwijderde websitegegevens hebben niet automatisch dezelfde opslag. De export/import-functie blijft beschikbaar.
-
-## Technische controle
-
-```
+```sh
 node --test tests/*.test.cjs
 node scripts/prepare-pages.mjs
-python tests/http-qa.py
+python -m http.server 8000
 ```
 
-De optionele Python-browsertests gebruiken Playwright en Chromium. In deze leveringsomgeving is URL-navigatie beperkt. De tests injecteren daarom de daadwerkelijke productieassets in een document en gebruiken expliciet een testopslag-adapter. Die adapter staat NIET in de app of in het gepubliceerde artefact. Lees QA.md voordat je de uitslagen als volledige apparaattests interpreteert.
+Na wijzigingen aan runtimebestanden:
 
+```sh
+node scripts/build-icons.mjs  # alleen nodig na aanpassing van de icoonvorm
+node scripts/update-release.mjs
+node --test tests/*.test.cjs
 ```
-python tests/browser-qa.py
-python tests/features-qa.py
-python tests/visual-qa.py
-```
+
+De test-API `window.LumaTest` wordt alleen beschikbaar wanneer een test vooraf `window.LUMA_TEST = true` instelt. In normaal gebruik is die API afwezig.
+
+## Voortgang en updates
+
+De bestaande sleutel `luma.save.v1` en alle 72 oorspronkelijke puzzelindelingen blijven intact. Instellingen bevat export/import; import voegt de beste scores samen. Wis geen websitegegevens om te verversen. Nieuwe serviceworkers activeren na afsluiten van oude tabs of via de updateknop wanneer beschikbaar.
+
+De oude bestanden `assets/app.js`, `assets/app.css`, `assets/worlds.js` en eerdere branding blijven als regressiereferentie aanwezig, maar worden niet door de nieuwe app geladen. `tests/art.test.cjs` en `tests/symbols.test.cjs` testen uitsluitend die oudere bronnen. De nieuwe vormgeving wordt getest in `tests/studio.test.cjs`.
+
+Zie `DESIGN.md`, `QA.md` en `START-HIER.md` voor ontwerpkeuzes, testgrenzen en publicatiecontrole.

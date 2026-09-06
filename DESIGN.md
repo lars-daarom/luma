@@ -1,38 +1,23 @@
-# Luma 4.1 - Een karakterfamilie, twee detailniveaus
+# Luma 5.0 - ontwerp
 
 ## Richting
 
-De vraag was niet om de mascotte te verwijderen. Het probleem was dat de grote illustratieve karakters op kleine puzzeltegels te veel details hadden. Daarom heeft elk plantenvriendje nu twee uitvoeringen: een levendig karakter in de tuin en een stil, optisch gecentreerd symbool op het bord.
+Een eigen rustige flat-designstijl, geinspireerd door de helderheid van casual puzzelgames. Geen overgenomen Two Dots-assets, merknaam, levels of geluidsbestanden. Geen mascottes, gezichten, papiertextuur of volumineuze pijpen in de actieve interface.
 
-Hetzelfde silhouet, niet dezelfde hoeveelheid detail.
+## Een systeem
 
-## Geraadpleegde referenties
+Een abstract verbonden U-symbool met twee punten vormt het appicoon. Zes werelden delen dezelfde typografie, afstandsregels, kaartradii en iconen. Kleur komt uit de wereld: koraal, teal, bosgroen, terracotta, lila en zeegroen. Volledig dekkende vectorlandschappen voegen sfeer toe buiten het speelbord.
 
-De iOS Icon Gallery is opnieuw bezocht. Met name de afbeelding van Puff is daadwerkelijk visueel bekeken: een enkel groot, zacht silhouet met heel weinig gezichtsdetails. Dat ondersteunt hier een ontwerpkeuze, niet een garantie op succes of een beoordeling namens de galerie. Luma gebruikt een eigen bloem, gezicht, compositie en kleuren.
+## Bord en spelregels
 
-Puff, iOS Icon Gallery:
-https://www.iosicongallery.com/icons/puff-2025-04-13/
+Een enkele dekkende lijn vormt elk pad. Er is geen halfdoorzichtige basis of lichte binnenrail. De lijn draait in een vaste clip per tegel; aansluitingen gebruiken dezelfde coordinaten. Vorm en toestand geven betekenis: bron, open doelring, gevuld doel, zeshoekige poort en vierkant vastpunt.
 
-Bekeken iconafbeelding:
-https://cdn.jim-nielsen.com/ios/512/puff-2025-04-13.png?rf=1024
+Levelkaarten bevatten nummer, score en een rustige geselecteerde toestand op de kaart zelf. Werelden gebruiken kleine landschappen in plaats van grote losse karakters. De voormalige tuin is een collectie met mijlpalen bij 3, 6 en 12 voltooide levels.
 
-Apple, ontwerpprincipes:
-https://developer.apple.com/design/human-interface-guidelines/design-principles
+## Hulpmiddelen
 
-Apple, asset best practices:
-https://developer.apple.com/app-store/asset-best-practices/
+Terug, Hint en Vonk zijn echte functies. Vonk zet een gekozen tegel automatisch goed. De interface toont geen verzonnen voorraden, munten of betaalde boosters. Met hulp krijg je 1 ster; zonder hulp 2; zonder hulp binnen de haalbare richtlijn 3. De richtlijn is niet gegarandeerd het theoretische minimum.
 
-Apple, interface-iconen:
-https://developer.apple.com/jp/design/human-interface-guidelines/icons
+## Schermen en toegankelijkheid
 
-## Vertaald naar de app
-
-1. **Identiteit op klein formaat.** Een groot bloemhoofd op een rustige groene ondergrond. Geen tekst, miniwereld of complete lichaamsanimatie in het appicoon. Dezelfde afgeronde bloemvorm komt terug in de illustraties.
-2. **Verschil zonder drukte.** Luma is een bloemrozet, Pippa een tulp, Nori een lotus, Mosi een paddenstoel, Pico een cactus, Nova een sterbloem en Kiki een klavertje. Gezichtjes en lijfjes verdwijnen op het speelbord.
-3. **Een leesbare puzzel.** Opaque paden met een rustige inleg, beperkt binnen de draaitegel. Geen gestapelde transparante halve buizen. Bron en doel hebben een andere kern/detailbehandeling.
-4. **Status in de kaart, niet in een losse cirkel.** Het levelnummer blijft op dezelfde positie. De gekozen hervat-/starttegel wordt als geheel benadrukt. Voltooiing krijgt kleine lichtjes en een vink, niet een nieuwe ronde vorm.
-5. **Rust door herhaling.** Afgeronde rechthoeken voor knoppen en levelkaarten; botanische silhouetten voor spelinhoud; grotere illustraties alleen waar er ruimte voor is. iPad landscape gebruikt de breedte voor bord en begeleiding, niet voor een uitgerekte telefoon.
-
-## Wat dit niet claimt
-
-Dit is geen native SwiftUI-app, geen officieel App Store-product en geen Apple Design Award-winnaar. Het is een verzorgde, adaptieve webapp. Safari beheert zelf browserbalken en installatiegedrag. Visuele inspiratie uit een galerie maakt de app niet automatisch geschikt voor opname in die galerie; dat oordeel ligt bij de beheerder.
+Op de telefoon staat het bord voorop; aanvullende uitleg mag scrollen in plaats van raakvlakken te verkleinen. iPad portrait gebruikt een groter centraal bord; iPad landscape een bord met vaste zijbediening. Contrast, verminderde beweging, toetsenbordbediening en gelabelde controls zijn ingebouwd. De browser bepaalt uiteindelijk zijn eigen kleurweergave ondanks meegestuurde theme-color en achtergronden.

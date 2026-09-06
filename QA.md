@@ -1,93 +1,25 @@
-# Luma 4.1.0 - Controleverslag
+# Luma 5.0 - testverslag
 
-Datum: 6 september 2026. De uitslagen hieronder horen bij deze bundel, niet bij de live GitHub-site.
+## Uitgevoerde controles tijdens ontwikkeling
 
-## Wat daadwerkelijk is uitgevoerd
+De nieuwe interface is lokaal in Chromium gecontroleerd. 72 campagnepuzzels zijn via DOM-clicks op de speelstukken opgelost; de oplossingsrichting kwam uit de bekende generatoroplossing. Dit is een functionele regressietest, geen menselijke moeilijkheidstest.
 
-### Node-tests: 19 tests geslaagd
+81 scherm-/formaatcombinaties zijn gecontroleerd: home, werelden, collectie en een level uit elk van de zes werelden, op 320x568, 375x667, 390x844, 430x932, 768x1024, 834x1194, 1024x768, 1194x834 en 1366x1024. In deze controles waren er geen horizontale overflows en geen zichtbare knoppen onder 44x44 CSS-pixels (afrondingstolerantie 0,1 px).
 
-`node --test tests/*.test.cjs`
+Acht aanvullende controles dekten draaien/undo, hint plus gerichte Vonk plus undo, contrast en verminderde beweging, hervatten van versie-1-opslag, vervangingsbevestiging bij dagpuzzels, vrij spel op 6x6, beschadigde hervatdata zonder verlies van voltooide levels, en doorgaan na sluiten van het succesvenster. Geen ongehanteerde JavaScript-fouten gemeld in die run.
 
-- 72 campagnepuzzels: geldige, niet reeds opgeloste startopstelling en bereikbare oplossing.
-- 240 gegenereerde puzzels: zes werelden, vier bordformaten, tien seeds.
-- 365 dagpuzzels.
-- In totaal 677 logisch gecontroleerde puzzelgevallen.
-- Alle 72 campagne-layouts vergeleken met de opgeslagen oorspronkelijke signatures. Identiek.
-- Zeven verschillende symbolen; geen karaktergezichten of lijfjes in de bordglyphs.
-- Doorlopende pijpgeometrie en volledig dekkende kleurlagen in de renderer.
-- Zeven plantenvrienden en de omgevingsbasis; voortgangscompatibiliteit en geen Unicode-emoji in de geteste appbronnen.
-- Versies en relatieve paden in app, manifest en assets gecontroleerd.
-- Worker-simulatie: cache-isolatie per projectroute, nieuwe assets, offline fallback, versiebeveiliging en diagnostiek-bypass.
-- Statische publicatie: SHA-256-validatie van 13 runtimebestanden, index op de artefactroot, geen docs- of README-kopie in de publicatie, correct workflowpad en permissies.
-- Opzettelijk leeggemaakte en beschadigde testmappen geven een duidelijke preflight-fout. Deze proeven veranderen niet de gebruiker-repository.
+Deze lokale browsercontrole gebruikte expliciete testopslag in het geheugen en een history-adapter; de scripts en CSS werden in de browser geinjecteerd. Dit verifieert dus geen werkelijk netwerkverkeer, browser-back-stack, fysieke apparaatopslag of PWA-installatie. Schermbeelden zijn na de intreeanimatie beoordeeld.
 
-### Browserinterface
+## Reproduceerbare Node-controles
 
-`python tests/browser-qa.py`
+`node --test tests/*.test.cjs` omvat 25 tests: oorspronkelijke engine/art-regressies, de releasecatalogus, ontbrekende en gemengde bestanden, relatief Pages-pad, worker-cache-isolatie en de nieuwe studio-vormgeving. De nieuwe generatietest controleert 677 gevallen: 72 campagnelevels, 240 vrije puzzels en 365 dagpuzzels. Alle 72 campagne-indelingen komen exact overeen met de eerdere versies.
 
-- Alle 72 campagnelevels daadwerkelijk met de productie-DOM-knoppen opgelost. Geen aparte mocks van de spelbesturing.
-- Introductie met pointerklik, begroeting, winvenster, score-uitleg, Escape, volgend level, ongedaan maken, hint, herstart annuleren en bevestigen.
-- Dagpuzzel en vrije 6x6-puzzel opgelost.
-- Download van voortgangsexport, ongeldige import, geldige import, behoud van hogere scores en herladen met bestaande testvoortgang.
-- Oriëntatieverandering behoudt de actieve puzzel en draaiingen.
-- 77 combinaties: 11 schermformaten en zeven schermen per formaat. Breedtes 320, 375, 393, 430, 620, 768, 834, 1024, 1194 en 1366 CSS-pixels, met twee verschillende hoogtes bij 1024.
-- Geen horizontale overflow, geen te kleine knoppen volgens de 43,9px-tolerantie voor een 44px-ontwerpdoel, geen JavaScript-fouten in deze suite.
+De Node-workercontrole is een simulatie van caches en fetch. Het is geen offline browsertest. Oude arttests blijven alleen als regressiereferentie draaien; ze bewijzen niet dat de nieuwe interface die oude mascottes gebruikt.
 
-### Tuin en karakters
+De workflow Controleer Luma voert de Node-controles uit op de daadwerkelijk gecommitte bestanden en maakt het geverifieerde artifact. De status bij de commit in GitHub is de bron voor het uiteindelijke CI-resultaat.
 
-`python tests/features-qa.py`
+## Nog niet geverifieerd
 
-- Derde opgelost level verwelkomt Pippa; drie opgeloste puzzels geven drie gegroeide tuinbedden.
-- Verzorging verandert de score/voortgang niet.
-- Alle zeven karaktervensters openen en sluiten.
-- Tuinbed-raakvlakken overlappen niet bij vijf telefoon-/tabletbreedtes.
-- Woestijnlevel gebruikt het cactus-symbool voor bron en begeleiding.
-- DOM-waarde van theme-color wisselt met de wereld. Dit is geen meting van de echte Safari-balk.
-- Liggend/staand wisselen behoudt de sessie.
+Fysieke iPhone/iPad, Safari-balkkleuren, echte beginscherminstallatie, upgrades vanuit elke oude serviceworker, werkelijk offline hervatten en screenreader-gebruik op iOS moeten op apparaten worden nagekeken. Muziek en effecten zijn uit de vorige versie behouden; deze release bevat geen nieuwe meting van het daadwerkelijke audiosignaal.
 
-### Nieuwe tekenlaag en levelkaarten
-
-`python tests/visual-qa.py`
-
-- Alle zes werelden onderzocht.
-- 254 werkelijke SVG-pijplagen hebben opacity 1, stroke-opacity 1, totale voorouderopacity 1 en geen blend/filter. Clipgebied begrenst de draaiende geometrie.
-- Geen volledige karakters op het bord.
-- Na een draai stijgt de draai-teller; terug in de levelselectie blijft de hervatte tegel aanbevolen.
-- De aanbeveling is een afgeronde rechthoek, geen cirkel. Levelnummer blijft zichtbaar.
-- Toetsenbordfocus en behoud bij draaien van de tablet als gerichte smoke checks.
-
-### Statische HTTP-publicatie
-
-`python tests/http-qa.py`
-
-Dezelfde `scripts/prepare-pages.mjs` als in de workflow bouwt eerst het artefact. Dat is met een lokale HTTP-server onder `/luma/` aangeboden.
-
-- `/luma/`: HTTP 200 met index van 4.1.0.
-- Alle 13 runtimebestanden: HTTP 200, juiste bestandsgrootte en SHA-256.
-- `release.json`: HTTP 200, versie 4.1.0.
-- De relatieve CSS-, JavaScript-, manifest- en iconlinks uit index werken onder die projectroute.
-- Een bewust niet-bestaand bestand geeft HTTP 404, geen misleidende HTML met status 200.
-- Workflow-YAML en diagnostische JavaScript syntactisch gecontroleerd.
-
-## Visueel bekeken
-
-De daadwerkelijke gerenderde app is bekeken op iPhone-portraitformaat, iPad portrait en iPad landscape. Appicoon, bloemvorm, bordpaden, nieuwe symbolen en levelkaarten zijn visueel gecontroleerd. De preview bij deze levering bestaat uit werkelijke screenshots plus de meegeleverde vectorbranding, niet uit een gegenereerde interface-afbeelding.
-
-## Belangrijke beperkingen
-
-De Chromium-runner blokkeert URL-navigatie door omgevingsbeleid. De UI-tests laden daarom de werkelijke HTML, CSS en JavaScript inline, met een expliciete test-only localStorage-adapter. De adapter staat uitsluitend in de tests en niet in de app. De lokale HTTP-test gebruikt echte HTTP-verzoeken, maar niet een navigerende Safari- of Chromium-PWA.
-
-NIET uitgevoerd of bevestigd:
-
-- Publicatie op de echte GitHub Actions-runner en de uiteindelijke live Pages-site.
-- Fysieke iPhone-/iPad-apparaten, Safari/WebKit, top-/statusbalkkleuren.
-- Installatie via het beginscherm en echte offline-herstart na een app-update.
-- Echte persistentie onder browserquota, prive-modus, deviceherstart of verwijderde websitegegevens.
-- Audit met VoiceOver of volledige WCAG-certificering.
-- Een nieuwe audio-luistertest op fysieke apparaten. De bestaande muziek- en geluidscode is behouden.
-
-De repository is niet op afstand aangepast. Er is geen commit, push, instellingenwijziging of live deployment uitgevoerd. De gebruiker moet de bestanden committen en Source op GitHub Actions zetten volgens START-HIER.md.
-
-## Reproduceerbare resultaten
-
-De samenvattingen staan in `qa-results/`. De volledige testscripts zitten in `tests/`. Screenshots van eigen testruns komen in genegeerde outputmappen terecht en worden niet door de workflow gepubliceerd.
+De live Pages-deployment staat los van deze ontwikkeltests. Controleer de publicatierun bij de merge en gebruik controle.html voor de online bestanden. Geen award-, populariteits- of retentieclaim.

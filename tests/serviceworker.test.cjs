@@ -2,7 +2,7 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const ROOT=path.join(__dirname,'..'),SCOPE='https://example.test/luma/';
 const normalize=req=>new URL(typeof req==='string'?req:req.url,SCOPE).href;
-test('4.1 worker simulation: cache isolation, version safety, diagnostic bypass',async()=>{
+test('5.0 worker simulation: cache isolation, version safety, diagnostic bypass',async()=>{
  const stores=new Map(),listeners={};
  const self={registration:{scope:SCOPE},location:{origin:'https://example.test'},addEventListener:(n,f)=>listeners[n]=f,skipWaiting:async()=>{},clients:{claim:async()=>{}}};
  const caches={keys:async()=>[...stores.keys()],delete:async k=>stores.delete(k),open:async k=>{
@@ -16,19 +16,19 @@ test('4.1 worker simulation: cache isolation, version safety, diagnostic bypass'
  stores.set('luma-v3.0.0-pages-'+SCOPE,new Map());stores.set('luma-v3.0.0-pages-https://example.test/another-app/',new Map());
  await dispatch('install');await dispatch('activate');
  assert(!stores.has('luma-v3.0.0-pages-'+SCOPE));assert(stores.has('luma-v3.0.0-pages-https://example.test/another-app/'));
- const key=[...stores.keys()].find(k=>k.startsWith('luma-v4.1.0-'));assert.equal(stores.get(key).size,12);
- online=false;assert((await(await nav(SCOPE+'?level=15')).text()).includes('assets/worlds.js?v=4.1.0'));
- const asset=await dispatch('fetch',{request:{url:SCOPE+'assets/worlds.js?v=4.1.0',method:'GET',mode:'cors'}});assert((await asset.text()).includes('Nori'));
+ const key=[...stores.keys()].find(k=>k.startsWith('luma-v5.0.0-'));assert.equal(stores.get(key).size,10);
+ online=false;assert((await(await nav(SCOPE+'?level=15')).text()).includes('assets/studio-art.js?v=5.0.0'));
+ const asset=await dispatch('fetch',{request:{url:SCOPE+'assets/studio-art.js?v=5.0.0',method:'GET',mode:'cors'}});assert((await asset.text()).includes('LumaStudioArt'));
  assert.equal(await nav(SCOPE+'controle.html'),undefined);
  assert.equal(await nav(SCOPE+'release.json'),undefined);
  assert.equal(await nav(SCOPE+'index.html?luma-check=1'),undefined);
- assert.equal(await dispatch('fetch',{request:{url:SCOPE+'assets/app.js?luma-check=1',method:'GET',mode:'cors'}}),undefined);
+ assert.equal(await dispatch('fetch',{request:{url:SCOPE+'assets/studio.js?luma-check=1',method:'GET',mode:'cors'}}),undefined);
  assert.equal(await nav('https://example.test/another-app/'),undefined);
  assert.equal(await nav('https://other.test/luma/'),undefined);
  assert.equal(await dispatch('fetch',{request:{url:SCOPE,method:'POST',mode:'navigate'}}),undefined);
  online=true;assert.equal(await(await nav(SCOPE)).text(),'new-version-page');
- online=false;assert((await(await nav(SCOPE)).text()).includes('name="app-version" content="4.1.0"'));
- online=true;html='<meta name="app-version" content="4.1.0"><main>updated-v4</main>';await nav(SCOPE);
+ online=false;assert((await(await nav(SCOPE)).text()).includes('name="app-version" content="5.0.0"'));
+ online=true;html='<meta name="app-version" content="5.0.0"><main>updated-v4</main>';await nav(SCOPE);
  online=false;assert((await(await nav(SCOPE+'?daily=2026-09-06')).text()).includes('updated-v4'));
  online=true;status=503;html='error';assert((await(await nav(SCOPE)).text()).includes('updated-v4'));
 });
