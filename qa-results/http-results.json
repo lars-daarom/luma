@@ -1,0 +1,100 @@
+{
+  "localProjectPath": "/luma/",
+  "rootIndexStatus": 200,
+  "files": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "bytes": 2430,
+      "sha256Matches": true,
+      "mime": "text/html"
+    },
+    {
+      "file": "manifest.webmanifest",
+      "status": 200,
+      "bytes": 822,
+      "sha256Matches": true,
+      "mime": "application/manifest+json"
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "bytes": 2189,
+      "sha256Matches": true,
+      "mime": "text/javascript"
+    },
+    {
+      "file": "controle.html",
+      "status": 200,
+      "bytes": 5493,
+      "sha256Matches": true,
+      "mime": "text/html"
+    },
+    {
+      "file": "assets/app.css",
+      "status": 200,
+      "bytes": 59123,
+      "sha256Matches": true,
+      "mime": "text/css"
+    },
+    {
+      "file": "assets/worlds.js",
+      "status": 200,
+      "bytes": 21071,
+      "sha256Matches": true,
+      "mime": "text/javascript"
+    },
+    {
+      "file": "assets/app.js",
+      "status": 200,
+      "bytes": 74708,
+      "sha256Matches": true,
+      "mime": "text/javascript"
+    },
+    {
+      "file": "assets/paper.png",
+      "status": 200,
+      "bytes": 13452,
+      "sha256Matches": true,
+      "mime": "image/png"
+    },
+    {
+      "file": "icons/icon.svg",
+      "status": 200,
+      "bytes": 15113,
+      "sha256Matches": true,
+      "mime": "image/svg+xml"
+    },
+    {
+      "file": "icons/icon-192.png",
+      "status": 200,
+      "bytes": 13137,
+      "sha256Matches": true,
+      "mime": "image/png"
+    },
+    {
+      "file": "icons/icon-512.png",
+      "status": 200,
+      "bytes": 51169,
+      "sha256Matches": true,
+      "mime": "image/png"
+    },
+    {
+      "file": "icons/icon-maskable.png",
+      "status": 200,
+      "bytes": 51169,
+      "sha256Matches": true,
+      "mime": "image/png"
+    },
+    {
+      "file": "icons/apple-touch-icon.png",
+      "status": 200,
+      "bytes": 12747,
+      "sha256Matches": true,
+      "mime": "image/png"
+    }
+  ],
+  "releaseJsonStatus": 200,
+  "missingFileStatus": 404,
+  "liveGitHubDeploymentTested": false
+}

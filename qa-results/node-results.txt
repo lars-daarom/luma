@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: Seven original species, six different hosts, seven portraits
+ok 1 - Seven original species, six different hosts, seven portraits
+  ---
+  duration_ms: 6.645982
+  type: 'test'
+  ...
+# Subtest: Every environment has an opaque full-size base and unique gradient ids
+ok 2 - Every environment has an opaque full-size base and unique gradient ids
+  ---
+  duration_ms: 106.426528
+  type: 'test'
+  ...
+# Subtest: Collection follows existing completed level IDs without a new save format
+ok 3 - Collection follows existing completed level IDs without a new save format
+  ---
+  duration_ms: 0.699878
+  type: 'test'
+  ...
+# Subtest: SVG artwork and runtime contain no Unicode emoji
+ok 4 - SVG artwork and runtime contain no Unicode emoji
+  ---
+  duration_ms: 1.079044
+  type: 'test'
+  ...
+# Subtest: Release catalog validates every runtime file, relative manifest and correct version
+ok 5 - Release catalog validates every runtime file, relative manifest and correct version
+  ---
+  duration_ms: 41.268748
+  type: 'test'
+  ...
+# Subtest: Pages artifact contains index.html at top level, with no duplicate docs or repository files
+ok 6 - Pages artifact contains index.html at top level, with no duplicate docs or repository files
+  ---
+  duration_ms: 68.037431
+  type: 'test'
+  ...
+# Subtest: An empty checkout fails early with an actionable message
+ok 7 - An empty checkout fails early with an actionable message
+  ---
+  duration_ms: 5.347679
+  type: 'test'
+  ...
+# Subtest: Missing app files and mixed versions cannot produce a new Pages artifact
+ok 8 - Missing app files and mixed versions cannot produce a new Pages artifact
+  ---
+  duration_ms: 46.080342
+  type: 'test'
+  ...
+# Subtest: Real workflow path, minimum Pages permissions, official static upload and no Jekyll
+ok 9 - Real workflow path, minimum Pages permissions, official static upload and no Jekyll
+  ---
+  duration_ms: 1.253961
+  type: 'test'
+  ...
+# Subtest: 72 campaign puzzles have valid, nontrivial solutions
+ok 10 - 72 campaign puzzles have valid, nontrivial solutions
+  ---
+  duration_ms: 32.707995
+  type: 'test'
+  ...
+# Subtest: 240 generated puzzles across six worlds and four board sizes
+ok 11 - 240 generated puzzles across six worlds and four board sizes
+  ---
+  duration_ms: 62.647573
+  type: 'test'
+  ...
+# Subtest: 365 daily puzzles
+ok 12 - 365 daily puzzles
+  ---
+  duration_ms: 99.242729
+  type: 'test'
+  ...
+# Subtest: grading and validation
+ok 13 - grading and validation
+  ---
+  duration_ms: 0.441815
+  type: 'test'
+  ...
+# Subtest: No Unicode emoji in application source
+ok 14 - No Unicode emoji in application source
+  ---
+  duration_ms: 0.440692
+  type: 'test'
+  ...
+# Subtest: GitHub project path deployment, version 4.1 assets and standalone-free production
+ok 15 - GitHub project path deployment, version 4.1 assets and standalone-free production
+  ---
+  duration_ms: 1.484423
+  type: 'test'
+  ...
+# Subtest: All 72 saved campaign layouts retain their 2.0 signatures
+ok 16 - All 72 saved campaign layouts retain their 2.0 signatures
+  ---
+  duration_ms: 23.816243
+  type: 'test'
+  ...
+# Subtest: 4.1 worker simulation: cache isolation, version safety, diagnostic bypass
+ok 17 - 4.1 worker simulation: cache isolation, version safety, diagnostic bypass
+  ---
+  duration_ms: 54.91727
+  type: 'test'
+  ...
+# Subtest: Seven distinct botanical glyphs, no faces or full characters inside board symbols
+ok 18 - Seven distinct botanical glyphs, no faces or full characters inside board symbols
+  ---
+  duration_ms: 2.278225
+  type: 'test'
+  ...
+# Subtest: Renderer has one continuous base path plus one solid inlay path per pipe
+ok 19 - Renderer has one continuous base path plus one solid inlay path per pipe
+  ---
+  duration_ms: 0.991164
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 378.347519

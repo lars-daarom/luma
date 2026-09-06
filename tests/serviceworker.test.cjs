@@ -1,0 +1,34 @@
+/* Worker simulation: real browser installation is a separate device test. */
+const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const ROOT=path.join(__dirname,'..'),SCOPE='https://example.test/luma/';
+const normalize=req=>new URL(typeof req==='string'?req:req.url,SCOPE).href;
+test('4.1 worker simulation: cache isolation, version safety, diagnostic bypass',async()=>{
+ const stores=new Map(),listeners={};
+ const self={registration:{scope:SCOPE},location:{origin:'https://example.test'},addEventListener:(n,f)=>listeners[n]=f,skipWaiting:async()=>{},clients:{claim:async()=>{}}};
+ const caches={keys:async()=>[...stores.keys()],delete:async k=>stores.delete(k),open:async k=>{
+  if(!stores.has(k))stores.set(k,new Map());const m=stores.get(k);
+  return {addAll:async files=>{for(const file of files){const u=new URL(file,SCOPE),rel=u.pathname.slice('/luma/'.length)||'index.html';assert(fs.existsSync(path.join(ROOT,rel)),file);m.set(u.href,new Response(fs.readFileSync(path.join(ROOT,rel))));}},put:async(r,v)=>m.set(normalize(r),v),match:async r=>m.get(normalize(r))?.clone()};
+ }};
+ let online=true,html='new-version-page',status=200;
+ vm.runInNewContext(fs.readFileSync(path.join(ROOT,'sw.js'),'utf8'),{self,caches,URL,Response,fetch:async()=>{if(!online)throw Error('offline');return new Response(html,{status});}});
+ async function dispatch(name,extra={}){const waits=[];let response;listeners[name]({...extra,waitUntil:p=>waits.push(p),respondWith:p=>response=p});await Promise.all(waits);return response?await response:undefined;}
+ const nav=url=>dispatch('fetch',{request:{url,method:'GET',mode:'navigate'}});
+ stores.set('luma-v3.0.0-pages-'+SCOPE,new Map());stores.set('luma-v3.0.0-pages-https://example.test/another-app/',new Map());
+ await dispatch('install');await dispatch('activate');
+ assert(!stores.has('luma-v3.0.0-pages-'+SCOPE));assert(stores.has('luma-v3.0.0-pages-https://example.test/another-app/'));
+ const key=[...stores.keys()].find(k=>k.startsWith('luma-v4.1.0-'));assert.equal(stores.get(key).size,12);
+ online=false;assert((await(await nav(SCOPE+'?level=15')).text()).includes('assets/worlds.js?v=4.1.0'));
+ const asset=await dispatch('fetch',{request:{url:SCOPE+'assets/worlds.js?v=4.1.0',method:'GET',mode:'cors'}});assert((await asset.text()).includes('Nori'));
+ assert.equal(await nav(SCOPE+'controle.html'),undefined);
+ assert.equal(await nav(SCOPE+'release.json'),undefined);
+ assert.equal(await nav(SCOPE+'index.html?luma-check=1'),undefined);
+ assert.equal(await dispatch('fetch',{request:{url:SCOPE+'assets/app.js?luma-check=1',method:'GET',mode:'cors'}}),undefined);
+ assert.equal(await nav('https://example.test/another-app/'),undefined);
+ assert.equal(await nav('https://other.test/luma/'),undefined);
+ assert.equal(await dispatch('fetch',{request:{url:SCOPE,method:'POST',mode:'navigate'}}),undefined);
+ online=true;assert.equal(await(await nav(SCOPE)).text(),'new-version-page');
+ online=false;assert((await(await nav(SCOPE)).text()).includes('name="app-version" content="4.1.0"'));
+ online=true;html='<meta name="app-version" content="4.1.0"><main>updated-v4</main>';await nav(SCOPE);
+ online=false;assert((await(await nav(SCOPE+'?daily=2026-09-06')).text()).includes('updated-v4'));
+ online=true;status=503;html='error';assert((await(await nav(SCOPE)).text()).includes('updated-v4'));
+});

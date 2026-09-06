@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "Third solved garden puzzle welcomes Pippa",
+    "Three solved levels create exactly three planted plots",
+    "Watering is cosmetic and never changes progress",
+    "All seven character sheets open and close correctly",
+    "Garden hit areas do not overlap at five phone/iPad widths",
+    "Desert level uses Pico as source and companion",
+    "Safari theme-color follows selected world",
+    "Orientation preserves turns and session"
+  ],
+  "errors": []
+}

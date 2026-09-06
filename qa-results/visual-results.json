@@ -1,0 +1,43 @@
+{
+  "worlds": [
+    {
+      "world": 0,
+      "opaquePipeLayers": 18,
+      "fullCharactersOnBoard": 0,
+      "selectedCardRadius": "20px"
+    },
+    {
+      "world": 1,
+      "opaquePipeLayers": 32,
+      "fullCharactersOnBoard": 0,
+      "selectedCardRadius": "20px"
+    },
+    {
+      "world": 2,
+      "opaquePipeLayers": 32,
+      "fullCharactersOnBoard": 0,
+      "selectedCardRadius": "20px"
+    },
+    {
+      "world": 3,
+      "opaquePipeLayers": 50,
+      "fullCharactersOnBoard": 0,
+      "selectedCardRadius": "20px"
+    },
+    {
+      "world": 4,
+      "opaquePipeLayers": 50,
+      "fullCharactersOnBoard": 0,
+      "selectedCardRadius": "20px"
+    },
+    {
+      "world": 5,
+      "opaquePipeLayers": 72,
+      "fullCharactersOnBoard": 0,
+      "selectedCardRadius": "20px"
+    }
+  ],
+  "keyboardSmoke": true,
+  "orientationPreserved": true,
+  "errors": []
+}

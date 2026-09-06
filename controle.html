@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#F8F7F0"><title>Luma 4.1 - Publicatiecontrole</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#f8f7f0;color:#304b3b;font:17px/1.6 system-ui,-apple-system,sans-serif}main{max-width:740px;margin:0 auto;padding:48px 24px 60px}h1{font-size:36px;line-height:1.13;letter-spacing:-1.3px}h2{font-size:21px;margin:0 0 8px}p{margin:12px 0}a{color:inherit}button,.button{border:0;border-radius:16px;min-height:52px;padding:14px 22px;background:#304b3b;color:#fffdf5;display:inline-block;font:inherit;text-decoration:none;cursor:pointer}button:disabled{opacity:.5}section{border:1px solid #dbe3d4;border-radius:24px;background:#fffdf7;padding:24px;margin:24px 0}.path{font:13px/1.5 ui-monospace,monospace;overflow-wrap:anywhere}.row{padding:12px 0;border-top:1px solid #e8ecdf;display:flex;justify-content:space-between;gap:20px}.row span{min-width:0}.row strong{flex-shrink:0;font-size:14px}.bad{color:#9a402c}.good{color:#3f6c49}.quiet{color:#687663}#context{overflow-wrap:anywhere}button:focus-visible,a:focus-visible{outline:3px solid #dfa775;outline-offset:4px}</style></head>
+<body><main><p class="quiet">LUMA / RELEASE 4.1.0</p><h1>Staat alles op de juiste plek?</h1><p>Deze pagina controleert de online bestanden van de app. Je puzzelvoortgang wordt niet gelezen, aangepast of verwijderd.</p>
+<section><h2 id="heading">Klaar voor de controle</h2><p id="summary" role="status" aria-live="polite">Controleer de versie, bestandsinhoud en bereikbaarheid van deze publicatie.</p><p id="context" class="path"></p><button id="check" type="button">Controleer publicatie</button><div id="results"></div></section>
+<p class="quiet">Staat hier 4.1.0 en slagen alle controles? Dan staan de bestanden van deze release op dit adres. Dit is geen test van Safari, app-installatie, geluid of offline spelen.</p>
+<p>Zie je nog een 404 of een Jekyll-fout in GitHub? Controleer op <strong>main</strong> of <code>index.html</code> en <code>.github/workflows/pages.yml</code> werkelijk zijn gecommit. Gebruik bij <strong>Settings &gt; Pages &gt; Source</strong> de optie <strong>GitHub Actions</strong> en start daarna <strong>Publiceer Luma</strong>.</p>
+<a class="button" href="./index.html">Open Luma</a><noscript><p class="bad">Schakel JavaScript in om de bestandscontrole uit te voeren.</p></noscript>
+</main><script>
+'use strict';
+const expected='4.1.0',button=document.getElementById('check'),list=document.getElementById('results'),summary=document.getElementById('summary'),heading=document.getElementById('heading');
+document.getElementById('context').textContent=location.origin+location.pathname;
+async function get(name){const url=new URL('./'+name,location.href);url.searchParams.set('luma-check',Date.now()+'-'+Math.random());const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),15000);try{const res=await fetch(url,{cache:'no-store',signal:controller.signal});if(!res.ok)throw Error('HTTP '+res.status);return res;}finally{clearTimeout(timer);}}
+function row(name,status,ok){const r=document.createElement('div');r.className='row';const n=document.createElement('span');n.className='path';n.textContent=name;const s=document.createElement('strong');s.className=ok?'good':'bad';s.textContent=status;r.append(n,s);list.append(r);}
+button.addEventListener('click',async()=>{
+ button.disabled=true;list.replaceChildren();heading.textContent='Even controleren';summary.textContent='De bestanden worden zonder browsercache opgehaald.';
+ try{
+  if(location.protocol==='file:')throw Error('Open deze pagina op het gepubliceerde HTTPS-adres, niet als lokaal HTML-bestand.');
+  if(!globalThis.crypto?.subtle)throw Error('Deze browser kan de integriteit niet controleren. Open het HTTPS-adres in een recente browser.');
+  const manifest=await(await get('release.json')).json();
+  if(manifest.version!==expected)throw Error('Online staat release '+manifest.version+', maar deze controlepagina verwacht '+expected+'. Wacht op een geslaagde deployment.');
+  if(!manifest.files||!manifest.files['index.html']||Object.keys(manifest.files).length!==13)throw Error('release.json mist de verwachte bestanden.');
+  let failed=0;row('release.json','Versie '+manifest.version,true);
+  for(const [name,meta] of Object.entries(manifest.files)){
+   if(!/^[a-zA-Z0-9._/-]+$/.test(name)||name.includes('..')||name.startsWith('/'))throw Error('Onveilige bestandsnaam in release.json.');
+   try{const buffer=await(await get(name)).arrayBuffer();const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',buffer))].map(x=>x.toString(16).padStart(2,'0')).join('');if(hash!==meta.sha256||buffer.byteLength!==meta.bytes)throw Error('Andere inhoud');row(name,'Juist bestand',true);}catch(e){failed++;row(name,e.name==='AbortError'?'Time-out':e.message,false);}
+  }
+  heading.textContent=failed?'Niet alles is bijgewerkt':'De release staat compleet online';summary.textContent=failed?failed+' bestand(en) missen of hebben een andere inhoud. Upload de volledige uitgepakte ZIP en publiceer opnieuw.':'Alle 13 appbestanden hebben de juiste SHA-256-controlewaarde voor Luma '+expected+'.';
+ }catch(e){heading.textContent='Controle niet afgerond';summary.textContent=e.name==='AbortError'?'Geen antwoord binnen 15 seconden. Controleer je verbinding.':e.message;}
+ finally{button.disabled=false;}
+});
+</script></body></html>

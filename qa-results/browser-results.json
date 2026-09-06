@@ -1,0 +1,1280 @@
+{
+  "uiCampaignCount": 72,
+  "campaign": [
+    {
+      "id": 0,
+      "taps": 1,
+      "won": true
+    },
+    {
+      "id": 1,
+      "taps": 2,
+      "won": true
+    },
+    {
+      "id": 2,
+      "taps": 4,
+      "won": true
+    },
+    {
+      "id": 3,
+      "taps": 6,
+      "won": true
+    },
+    {
+      "id": 4,
+      "taps": 7,
+      "won": true
+    },
+    {
+      "id": 5,
+      "taps": 10,
+      "won": true
+    },
+    {
+      "id": 6,
+      "taps": 8,
+      "won": true
+    },
+    {
+      "id": 7,
+      "taps": 7,
+      "won": true
+    },
+    {
+      "id": 8,
+      "taps": 11,
+      "won": true
+    },
+    {
+      "id": 9,
+      "taps": 10,
+      "won": true
+    },
+    {
+      "id": 10,
+      "taps": 13,
+      "won": true
+    },
+    {
+      "id": 11,
+      "taps": 11,
+      "won": true
+    },
+    {
+      "id": 12,
+      "taps": 16,
+      "won": true
+    },
+    {
+      "id": 13,
+      "taps": 14,
+      "won": true
+    },
+    {
+      "id": 14,
+      "taps": 14,
+      "won": true
+    },
+    {
+      "id": 15,
+      "taps": 14,
+      "won": true
+    },
+    {
+      "id": 16,
+      "taps": 17,
+      "won": true
+    },
+    {
+      "id": 17,
+      "taps": 19,
+      "won": true
+    },
+    {
+      "id": 18,
+      "taps": 20,
+      "won": true
+    },
+    {
+      "id": 19,
+      "taps": 17,
+      "won": true
+    },
+    {
+      "id": 20,
+      "taps": 18,
+      "won": true
+    },
+    {
+      "id": 21,
+      "taps": 20,
+      "won": true
+    },
+    {
+      "id": 22,
+      "taps": 18,
+      "won": true
+    },
+    {
+      "id": 23,
+      "taps": 22,
+      "won": true
+    },
+    {
+      "id": 24,
+      "taps": 14,
+      "won": true
+    },
+    {
+      "id": 25,
+      "taps": 18,
+      "won": true
+    },
+    {
+      "id": 26,
+      "taps": 13,
+      "won": true
+    },
+    {
+      "id": 27,
+      "taps": 13,
+      "won": true
+    },
+    {
+      "id": 28,
+      "taps": 17,
+      "won": true
+    },
+    {
+      "id": 29,
+      "taps": 16,
+      "won": true
+    },
+    {
+      "id": 30,
+      "taps": 30,
+      "won": true
+    },
+    {
+      "id": 31,
+      "taps": 32,
+      "won": true
+    },
+    {
+      "id": 32,
+      "taps": 35,
+      "won": true
+    },
+    {
+      "id": 33,
+      "taps": 33,
+      "won": true
+    },
+    {
+      "id": 34,
+      "taps": 31,
+      "won": true
+    },
+    {
+      "id": 35,
+      "taps": 39,
+      "won": true
+    },
+    {
+      "id": 36,
+      "taps": 23,
+      "won": true
+    },
+    {
+      "id": 37,
+      "taps": 17,
+      "won": true
+    },
+    {
+      "id": 38,
+      "taps": 23,
+      "won": true
+    },
+    {
+      "id": 39,
+      "taps": 24,
+      "won": true
+    },
+    {
+      "id": 40,
+      "taps": 27,
+      "won": true
+    },
+    {
+      "id": 41,
+      "taps": 29,
+      "won": true
+    },
+    {
+      "id": 42,
+      "taps": 25,
+      "won": true
+    },
+    {
+      "id": 43,
+      "taps": 25,
+      "won": true
+    },
+    {
+      "id": 44,
+      "taps": 32,
+      "won": true
+    },
+    {
+      "id": 45,
+      "taps": 27,
+      "won": true
+    },
+    {
+      "id": 46,
+      "taps": 36,
+      "won": true
+    },
+    {
+      "id": 47,
+      "taps": 33,
+      "won": true
+    },
+    {
+      "id": 48,
+      "taps": 22,
+      "won": true
+    },
+    {
+      "id": 49,
+      "taps": 23,
+      "won": true
+    },
+    {
+      "id": 50,
+      "taps": 25,
+      "won": true
+    },
+    {
+      "id": 51,
+      "taps": 28,
+      "won": true
+    },
+    {
+      "id": 52,
+      "taps": 29,
+      "won": true
+    },
+    {
+      "id": 53,
+      "taps": 33,
+      "won": true
+    },
+    {
+      "id": 54,
+      "taps": 31,
+      "won": true
+    },
+    {
+      "id": 55,
+      "taps": 30,
+      "won": true
+    },
+    {
+      "id": 56,
+      "taps": 34,
+      "won": true
+    },
+    {
+      "id": 57,
+      "taps": 33,
+      "won": true
+    },
+    {
+      "id": 58,
+      "taps": 33,
+      "won": true
+    },
+    {
+      "id": 59,
+      "taps": 35,
+      "won": true
+    },
+    {
+      "id": 60,
+      "taps": 34,
+      "won": true
+    },
+    {
+      "id": 61,
+      "taps": 39,
+      "won": true
+    },
+    {
+      "id": 62,
+      "taps": 33,
+      "won": true
+    },
+    {
+      "id": 63,
+      "taps": 39,
+      "won": true
+    },
+    {
+      "id": 64,
+      "taps": 35,
+      "won": true
+    },
+    {
+      "id": 65,
+      "taps": 42,
+      "won": true
+    },
+    {
+      "id": 66,
+      "taps": 46,
+      "won": true
+    },
+    {
+      "id": 67,
+      "taps": 49,
+      "won": true
+    },
+    {
+      "id": 68,
+      "taps": 45,
+      "won": true
+    },
+    {
+      "id": 69,
+      "taps": 45,
+      "won": true
+    },
+    {
+      "id": 70,
+      "taps": 54,
+      "won": true
+    },
+    {
+      "id": 71,
+      "taps": 55,
+      "won": true
+    }
+  ],
+  "geometryChecks": 77,
+  "matrix": [
+    {
+      "label": "home",
+      "width": 320,
+      "height": 568,
+      "scrollWidth": 320,
+      "scrollHeight": 823,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds",
+      "width": 320,
+      "height": 568,
+      "scrollWidth": 320,
+      "scrollHeight": 1146,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds-dark",
+      "width": 320,
+      "height": 568,
+      "scrollWidth": 320,
+      "scrollHeight": 1146,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "garden",
+      "width": 320,
+      "height": 568,
+      "scrollWidth": 320,
+      "scrollHeight": 1858,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "settings",
+      "width": 320,
+      "height": 568,
+      "scrollWidth": 320,
+      "scrollHeight": 1858,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "play-3x3",
+      "width": 320,
+      "height": 568,
+      "scrollWidth": 320,
+      "scrollHeight": 568,
+      "board": {
+        "x": 16,
+        "y": 150.09375,
+        "width": 288,
+        "height": 288,
+        "top": 150.09375,
+        "right": 304,
+        "bottom": 438.09375,
+        "left": 16
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "play-6x6",
+      "width": 320,
+      "height": 568,
+      "scrollWidth": 320,
+      "scrollHeight": 568,
+      "board": {
+        "x": 16,
+        "y": 150.09375,
+        "width": 288,
+        "height": 288,
+        "top": 150.09375,
+        "right": 304,
+        "bottom": 438.09375,
+        "left": 16
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "home",
+      "width": 375,
+      "height": 667,
+      "scrollWidth": 375,
+      "scrollHeight": 883,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds",
+      "width": 375,
+      "height": 667,
+      "scrollWidth": 375,
+      "scrollHeight": 1173,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds-dark",
+      "width": 375,
+      "height": 667,
+      "scrollWidth": 375,
+      "scrollHeight": 1193,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "garden",
+      "width": 375,
+      "height": 667,
+      "scrollWidth": 375,
+      "scrollHeight": 1947,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "settings",
+      "width": 375,
+      "height": 667,
+      "scrollWidth": 375,
+      "scrollHeight": 1947,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "play-3x3",
+      "width": 375,
+      "height": 667,
+      "scrollWidth": 375,
+      "scrollHeight": 667,
+      "board": {
+        "x": 16,
+        "y": 152.09375,
+        "width": 343,
+        "height": 343,
+        "top": 152.09375,
+        "right": 359,
+        "bottom": 495.09375,
+        "left": 16
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "play-6x6",
+      "width": 375,
+      "height": 667,
+      "scrollWidth": 375,
+      "scrollHeight": 667,
+      "board": {
+        "x": 16,
+        "y": 152.09375,
+        "width": 343,
+        "height": 343,
+        "top": 152.09375,
+        "right": 359,
+        "bottom": 495.09375,
+        "left": 16
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "home",
+      "width": 393,
+      "height": 852,
+      "scrollWidth": 393,
+      "scrollHeight": 895,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds",
+      "width": 393,
+      "height": 852,
+      "scrollWidth": 393,
+      "scrollHeight": 1178,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds-dark",
+      "width": 393,
+      "height": 852,
+      "scrollWidth": 393,
+      "scrollHeight": 1178,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "garden",
+      "width": 393,
+      "height": 852,
+      "scrollWidth": 393,
+      "scrollHeight": 1940,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "settings",
+      "width": 393,
+      "height": 852,
+      "scrollWidth": 393,
+      "scrollHeight": 1940,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "play-3x3",
+      "width": 393,
+      "height": 852,
+      "scrollWidth": 393,
+      "scrollHeight": 852,
+      "board": {
+        "x": 18,
+        "y": 199.03125,
+        "width": 357,
+        "height": 357,
+        "top": 199.03125,
+        "right": 375,
+        "bottom": 556.03125,
+        "left": 18
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "play-6x6",
+      "width": 393,
+      "height": 852,
+      "scrollWidth": 393,
+      "scrollHeight": 852,
+      "board": {
+        "x": 18,
+        "y": 199.03125,
+        "width": 357,
+        "height": 357,
+        "top": 199.03125,
+        "right": 375,
+        "bottom": 556.03125,
+        "left": 18
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "home",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "scrollHeight": 932,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "scrollHeight": 1217,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds-dark",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "scrollHeight": 1217,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "garden",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "scrollHeight": 2016,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "settings",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "scrollHeight": 2016,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "play-3x3",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "scrollHeight": 932,
+      "board": {
+        "x": 18,
+        "y": 199.03125,
+        "width": 394,
+        "height": 394,
+        "top": 199.03125,
+        "right": 412,
+        "bottom": 593.03125,
+        "left": 18
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "play-6x6",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "scrollHeight": 932,
+      "board": {
+        "x": 18,
+        "y": 199.03125,
+        "width": 394,
+        "height": 394,
+        "top": 199.03125,
+        "right": 412,
+        "bottom": 593.03125,
+        "left": 18
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "home",
+      "width": 620,
+      "height": 1000,
+      "scrollWidth": 620,
+      "scrollHeight": 1050,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds",
+      "width": 620,
+      "height": 1000,
+      "scrollWidth": 620,
+      "scrollHeight": 1407,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds-dark",
+      "width": 620,
+      "height": 1000,
+      "scrollWidth": 620,
+      "scrollHeight": 1407,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "garden",
+      "width": 620,
+      "height": 1000,
+      "scrollWidth": 620,
+      "scrollHeight": 2088,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "settings",
+      "width": 620,
+      "height": 1000,
+      "scrollWidth": 620,
+      "scrollHeight": 2088,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "play-3x3",
+      "width": 620,
+      "height": 1000,
+      "scrollWidth": 620,
+      "scrollHeight": 1000,
+      "board": {
+        "x": 44,
+        "y": 247.4375,
+        "width": 532,
+        "height": 532,
+        "top": 247.4375,
+        "right": 576,
+        "bottom": 779.4375,
+        "left": 44
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "play-6x6",
+      "width": 620,
+      "height": 1000,
+      "scrollWidth": 620,
+      "scrollHeight": 1017,
+      "board": {
+        "x": 44,
+        "y": 247.4375,
+        "width": 532,
+        "height": 532,
+        "top": 247.4375,
+        "right": 576,
+        "bottom": 779.4375,
+        "left": 44
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "home",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "scrollHeight": 1118,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "scrollHeight": 1407,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds-dark",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "scrollHeight": 1407,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "garden",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "scrollHeight": 2284,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "settings",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "scrollHeight": 2284,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "play-3x3",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "scrollHeight": 1144,
+      "board": {
+        "x": 44,
+        "y": 247.4375,
+        "width": 680,
+        "height": 680,
+        "top": 247.4375,
+        "right": 724,
+        "bottom": 927.4375,
+        "left": 44
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "play-6x6",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "scrollHeight": 1144,
+      "board": {
+        "x": 44,
+        "y": 247.4375,
+        "width": 680,
+        "height": 680,
+        "top": 247.4375,
+        "right": 724,
+        "bottom": 927.4375,
+        "left": 44
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "home",
+      "width": 834,
+      "height": 1194,
+      "scrollWidth": 834,
+      "scrollHeight": 1194,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds",
+      "width": 834,
+      "height": 1194,
+      "scrollWidth": 834,
+      "scrollHeight": 1407,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds-dark",
+      "width": 834,
+      "height": 1194,
+      "scrollWidth": 834,
+      "scrollHeight": 1407,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "garden",
+      "width": 834,
+      "height": 1194,
+      "scrollWidth": 834,
+      "scrollHeight": 2296,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "settings",
+      "width": 834,
+      "height": 1194,
+      "scrollWidth": 834,
+      "scrollHeight": 2296,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "play-3x3",
+      "width": 834,
+      "height": 1194,
+      "scrollWidth": 834,
+      "scrollHeight": 1197,
+      "board": {
+        "x": 44,
+        "y": 247.4375,
+        "width": 746,
+        "height": 746,
+        "top": 247.4375,
+        "right": 790,
+        "bottom": 993.4375,
+        "left": 44
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "play-6x6",
+      "width": 834,
+      "height": 1194,
+      "scrollWidth": 834,
+      "scrollHeight": 1197,
+      "board": {
+        "x": 44,
+        "y": 247.4375,
+        "width": 746,
+        "height": 746,
+        "top": 247.4375,
+        "right": 790,
+        "bottom": 993.4375,
+        "left": 44
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "home",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "scrollHeight": 768,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "scrollHeight": 809,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds-dark",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "scrollHeight": 809,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "garden",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "scrollHeight": 1519,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "settings",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "scrollHeight": 1519,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "play-3x3",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "scrollHeight": 770,
+      "board": {
+        "x": 52,
+        "y": 157.1875,
+        "width": 542.984375,
+        "height": 542.984375,
+        "top": 157.1875,
+        "right": 594.984375,
+        "bottom": 700.171875,
+        "left": 52
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "play-6x6",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "scrollHeight": 770,
+      "board": {
+        "x": 52,
+        "y": 157.1875,
+        "width": 542.984375,
+        "height": 542.984375,
+        "top": 157.1875,
+        "right": 594.984375,
+        "bottom": 700.171875,
+        "left": 52
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "home",
+      "width": 1194,
+      "height": 834,
+      "scrollWidth": 1194,
+      "scrollHeight": 834,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds",
+      "width": 1194,
+      "height": 834,
+      "scrollWidth": 1194,
+      "scrollHeight": 849,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds-dark",
+      "width": 1194,
+      "height": 834,
+      "scrollWidth": 1194,
+      "scrollHeight": 849,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "garden",
+      "width": 1194,
+      "height": 834,
+      "scrollWidth": 1194,
+      "scrollHeight": 1651,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "settings",
+      "width": 1194,
+      "height": 834,
+      "scrollWidth": 1194,
+      "scrollHeight": 1651,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "play-3x3",
+      "width": 1194,
+      "height": 834,
+      "scrollWidth": 1194,
+      "scrollHeight": 849,
+      "board": {
+        "x": 66.03125,
+        "y": 157.1875,
+        "width": 622,
+        "height": 622,
+        "top": 157.1875,
+        "right": 688.03125,
+        "bottom": 779.1875,
+        "left": 66.03125
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "play-6x6",
+      "width": 1194,
+      "height": 834,
+      "scrollWidth": 1194,
+      "scrollHeight": 849,
+      "board": {
+        "x": 66.03125,
+        "y": 157.1875,
+        "width": 622,
+        "height": 622,
+        "top": 157.1875,
+        "right": 688.03125,
+        "bottom": 779.1875,
+        "left": 66.03125
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "home",
+      "width": 1024,
+      "height": 1366,
+      "scrollWidth": 1024,
+      "scrollHeight": 1366,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds",
+      "width": 1024,
+      "height": 1366,
+      "scrollWidth": 1024,
+      "scrollHeight": 1407,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds-dark",
+      "width": 1024,
+      "height": 1366,
+      "scrollWidth": 1024,
+      "scrollHeight": 1407,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "garden",
+      "width": 1024,
+      "height": 1366,
+      "scrollWidth": 1024,
+      "scrollHeight": 2296,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "settings",
+      "width": 1024,
+      "height": 1366,
+      "scrollWidth": 1024,
+      "scrollHeight": 2296,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "play-3x3",
+      "width": 1024,
+      "height": 1366,
+      "scrollWidth": 1024,
+      "scrollHeight": 1366,
+      "board": {
+        "x": 112,
+        "y": 247.4375,
+        "width": 800,
+        "height": 800,
+        "top": 247.4375,
+        "right": 912,
+        "bottom": 1047.4375,
+        "left": 112
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "play-6x6",
+      "width": 1024,
+      "height": 1366,
+      "scrollWidth": 1024,
+      "scrollHeight": 1366,
+      "board": {
+        "x": 112,
+        "y": 247.4375,
+        "width": 800,
+        "height": 800,
+        "top": 247.4375,
+        "right": 912,
+        "bottom": 1047.4375,
+        "left": 112
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "home",
+      "width": 1366,
+      "height": 1024,
+      "scrollWidth": 1366,
+      "scrollHeight": 1024,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds",
+      "width": 1366,
+      "height": 1024,
+      "scrollWidth": 1366,
+      "scrollHeight": 1024,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "worlds-dark",
+      "width": 1366,
+      "height": 1024,
+      "scrollWidth": 1366,
+      "scrollHeight": 1024,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "garden",
+      "width": 1366,
+      "height": 1024,
+      "scrollWidth": 1366,
+      "scrollHeight": 1697,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "settings",
+      "width": 1366,
+      "height": 1024,
+      "scrollWidth": 1366,
+      "scrollHeight": 1697,
+      "board": null,
+      "smallTargets": []
+    },
+    {
+      "label": "play-3x3",
+      "width": 1366,
+      "height": 1024,
+      "scrollWidth": 1366,
+      "scrollHeight": 1024,
+      "board": {
+        "x": 53,
+        "y": 177.015625,
+        "width": 757.15625,
+        "height": 757.15625,
+        "top": 177.015625,
+        "right": 810.15625,
+        "bottom": 934.171875,
+        "left": 53
+      },
+      "smallTargets": []
+    },
+    {
+      "label": "play-6x6",
+      "width": 1366,
+      "height": 1024,
+      "scrollWidth": 1366,
+      "scrollHeight": 1024,
+      "board": {
+        "x": 53,
+        "y": 177.015625,
+        "width": 757.15625,
+        "height": 757.15625,
+        "top": 177.015625,
+        "right": 810.15625,
+        "bottom": 934.171875,
+        "left": 53
+      },
+      "smallTargets": []
+    }
+  ],
+  "horizontalOverflow": [],
+  "smallTargets": [],
+  "javascriptErrors": [],
+  "checks": [
+    "tutorial pointer click",
+    "mascot greeting",
+    "win/score dialog",
+    "escape returns to win",
+    "next level",
+    "undo",
+    "hint",
+    "restart cancel and confirm",
+    "orientation preserves puzzle",
+    "all campaign levels",
+    "daily completion",
+    "zen completion",
+    "export download",
+    "invalid and valid import",
+    "merge keeps higher scores",
+    "reload retains saved progress"
+  ]
+}
