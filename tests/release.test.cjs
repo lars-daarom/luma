@@ -1,9 +1,9 @@
 /* Release contract: static artifact-root deployment, versions, assets and saved-level compatibility. */
 const {test}=require('node:test'), assert=require('node:assert/strict'), fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
-const ROOT=path.join(__dirname,'..'), js=fs.readFileSync(path.join(ROOT,'assets/app.js'),'utf8'),css=fs.readFileSync(path.join(ROOT,'assets/app.css'),'utf8'),html=fs.readFileSync(path.join(ROOT,'index.html'),'utf8');
-test('GitHub project path deployment, version 4.1 assets and standalone-free production',()=>{
- assert(html.includes('assets/app.js?v=4.1.0'));assert(html.includes('assets/app.css?v=4.1.0'));
- assert(css.includes('./paper.png?v=4.1.0'));assert(js.includes("const KEY='luma.save.v1'"));
+const ROOT=path.join(__dirname,'..'), js=fs.readFileSync(path.join(ROOT,'assets/engine.js'),'utf8'),css=fs.readFileSync(path.join(ROOT,'assets/studio.css'),'utf8'),html=fs.readFileSync(path.join(ROOT,'index.html'),'utf8');
+test('GitHub project path deployment, version 5.0 assets and standalone-free production',()=>{
+ assert(html.includes('assets/engine.js?v=5.0.0'));assert(html.includes('assets/studio.js?v=5.0.0'));assert(html.includes('assets/studio.css?v=5.0.0'));
+ assert(!css.includes('paper.png'));assert(fs.readFileSync(path.join(ROOT,'assets/studio.js'),'utf8').includes("KEY='luma.save.v1'"));
  assert(!html.includes('testStore'));assert(!html.includes('window.LUMA_STANDALONE=true'));
  const m=JSON.parse(fs.readFileSync(path.join(ROOT,'manifest.webmanifest'),'utf8'));
  assert.equal(m.scope,'./');assert(m.start_url.startsWith('./'));assert.equal(m.display,'standalone');

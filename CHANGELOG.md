@@ -1,3 +1,17 @@
+# Luma 5.0.0
+
+- Volledig nieuwe flat-designinterface en abstract appicoon.
+- Mascottes uit de actieve app; tuin vervangen door een wereldcollectie.
+- Enkelvoudige, ondoorzichtige lichtpaden; duidelijke bron, doelen, poorten en vaste punten.
+- Nieuwe wereldkaarten, levelselectie, mobiele navigatie en iPad-zijbediening.
+- Werkende gerichte Vonk naast Hint en Terug, met eerlijke scoring.
+- Originele 72 layouts en luma.save.v1 behouden; beschadigde hervatdata worden veilig afgewezen.
+- Doorgaan blijft bereikbaar na sluiten van een succesvenster.
+- Geversioneerde offlinebestanden, nieuwe iconen en leesbare publicatiecontrole.
+- Bestaande Pages-rootpublicatie behouden; .nojekyll en afzonderlijke read-only CI toegevoegd.
+
+## Eerdere releases
+
 # 4.1.0
 
 - Echte workflow in `.github/workflows/pages.yml`, in plaats van alleen een optioneel voorbeeld elders.
