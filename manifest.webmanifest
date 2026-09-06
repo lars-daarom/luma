@@ -1,0 +1,18 @@
+{
+  "id":"./",
+  "name":"Luma - Kleine draai. Groot gevoel.",
+  "short_name":"Luma",
+  "description":"Een rustige lichtpuzzel met 72 levels, zes werelden en een eigen soundtrack.",
+  "lang":"nl",
+  "start_url":"./index.html",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#F7F3EA",
+  "theme_color":"#F7F3EA",
+  "categories":["games","entertainment"],
+  "icons":[
+    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"icons/icon-maskable.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}
