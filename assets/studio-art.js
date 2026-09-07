@@ -1,13 +1,13 @@
-/* Luma 5.0.0. Original, opaque vector artwork. No characters or external assets. */
+/* Luma 5.3.0. Core icons, world palettes and puzzle geometry. */
 (function(root){
 'use strict';
 const worlds=[
- {name:'Zonnetuin',tag:'Het begint met een vonk',description:'Korte routes, nieuwe richtingen.',accent:'#CC5A43',soft:'#F8DFCA',sky:'#F6E9D2',hill:'#C7D6AD',deep:'#789D80',ink:'#2E4147',bg:'#FAF8F1',rest:'#C6CDC4',rule:'De basis',symbol:'sun'},
- {name:'Regendauw',tag:'Vind de stroom',description:'Draai om de vaste punten heen.',accent:'#297F88',soft:'#DCEEE9',sky:'#DDEEF0',hill:'#ADCAC6',deep:'#6B9F9E',ink:'#29464C',bg:'#F3F8F5',rest:'#B9CED0',rule:'Vaste punten',symbol:'drop'},
- {name:'Fluisterbos',tag:'Kies je eigen pad',description:'Meer takken. Meer mogelijkheden.',accent:'#538367',soft:'#E4EBCF',sky:'#E6EDD9',hill:'#B1C9A0',deep:'#6E9575',ink:'#30483C',bg:'#F7F8EF',rest:'#C3CFBE',rule:'Vertakkingen',symbol:'branch'},
- {name:'Zandbloei',tag:'Denk voorbij de horizon',description:'Twee poorten, een nieuwe verbinding.',accent:'#B9603C',soft:'#F4E0C7',sky:'#F8E7CB',hill:'#E7BC97',deep:'#C88A68',ink:'#4C403A',bg:'#FCF7ED',rest:'#CEC3AD',rule:'Lichtpoorten',symbol:'portal'},
- {name:'Nachtkas',tag:'Alles komt samen',description:'Ontdek de kracht van een omweg.',accent:'#D4B3E9',soft:'#46465F',sky:'#353D55',hill:'#454E69',deep:'#59647E',ink:'#F6F1E6',bg:'#292F42',rest:'#727D93',rule:'Kringlopen',symbol:'moon'},
- {name:'Sterrenweide',tag:'Het grotere geheel',description:'Combineer alles wat je hebt ontdekt.',accent:'#427D81',soft:'#DDEDDD',sky:'#E6F0E6',hill:'#B6D3C5',deep:'#709D9C',ink:'#2E4A4C',bg:'#F2F8F2',rest:'#BECECC',rule:'De combinatie',symbol:'star'}
+ {name:'Zonnetuin',tag:'Het begint met een vonk',description:'Korte routes, heldere keuzes.',accent:'#D9684B',soft:'#F7E3CE',sky:'#C8EEE5',hill:'#B7D89F',deep:'#477868',ink:'#243F3A',bg:'#F8F2E7',rest:'#BAC6B8',rule:'De basis',symbol:'sun'},
+ {name:'Regendauw',tag:'Vind de stroom',description:'Draai om de vaste punten heen.',accent:'#2D8790',soft:'#DCEDE9',sky:'#CFEDEC',hill:'#8FC2B7',deep:'#337A80',ink:'#244A50',bg:'#F1F6F4',rest:'#B5CBC8',rule:'Vaste punten',symbol:'drop'},
+ {name:'Fluisterbos',tag:'Kies je eigen pad',description:'Meer takken. Meer mogelijkheden.',accent:'#5B8B65',soft:'#E1E9CE',sky:'#DCE9C7',hill:'#86A47C',deep:'#2F5C4D',ink:'#28443A',bg:'#F4F6EC',rest:'#BDC8B6',rule:'Vertakkingen',symbol:'branch'},
+ {name:'Zandbloei',tag:'Denk voorbij de horizon',description:'Poorten maken een nieuwe verbinding.',accent:'#C96543',soft:'#F4DDC1',sky:'#FBE7BE',hill:'#DEA06D',deep:'#7D5249',ink:'#4B3832',bg:'#FBF3E6',rest:'#CDBAA4',rule:'Lichtpoorten',symbol:'portal'},
+ {name:'Nachtkas',tag:'Alles komt samen',description:'Ontdek de kracht van een omweg.',accent:'#E3C66F',soft:'#384E61',sky:'#1C3452',hill:'#3F6073',deep:'#142F43',ink:'#F6F0D9',bg:'#142B3D',rest:'#6B7C88',rule:'Kringlopen',symbol:'moon'},
+ {name:'Sterrenweide',tag:'Het grotere geheel',description:'Combineer alles wat je hebt ontdekt.',accent:'#4D8D89',soft:'#DDE9DD',sky:'#6D8098',hill:'#789B91',deep:'#295E67',ink:'#2D4A4D',bg:'#EEF4EF',rest:'#B9C9C4',rule:'De combinatie',symbol:'star'}
 ];
 const paths={
  back:'<path d="m14.5 5-7 7 7 7"/>',arrow:'<path d="M4 12h15m-6-6 6 6-6 6"/>',close:'<path d="m6 6 12 12M18 6 6 18"/>',
