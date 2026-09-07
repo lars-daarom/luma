@@ -1,58 +1,21 @@
 {
-  "version": "5.0.0",
+  "version": "5.1.0",
   "algorithm": "git-blob-sha1",
   "files": {
-    ".nojekyll": {
-      "bytes": 28,
-      "gitSha": "e06f24b89ab0b6262756bf36bb72c02fd24b0607"
-    },
-    "index.html": {
-      "bytes": 1993,
-      "gitSha": "a3e640e15512a942f185af5489b1b6cbd4c1d7d7"
-    },
-    "manifest.webmanifest": {
-      "bytes": 706,
-      "gitSha": "6e829d983bd2eafe5d429ab8f51b6f64ffd346c9"
-    },
-    "sw.js": {
-      "bytes": 1776,
-      "gitSha": "c99bdfcf0a87796b5f3b4e6d3dadc65b3b960fc3"
-    },
-    "controle.html": {
-      "bytes": 3355,
-      "gitSha": "6769169b3b73f6d1538214afcd84105cbd48f25e"
-    },
-    "assets/studio.css": {
-      "bytes": 30168,
-      "gitSha": "19c779ca457027ebb3cdfc78d17979c191f12b68"
-    },
-    "assets/engine.js": {
-      "bytes": 14472,
-      "gitSha": "53e621fa6dde309ca7b8a4f29623447b927d8d7e"
-    },
-    "assets/studio-art.js": {
-      "bytes": 8485,
-      "gitSha": "01c4efebd30436e005e9595613acaabd1b107135"
-    },
-    "assets/studio.js": {
-      "bytes": 38728,
-      "gitSha": "4791cc30c689ede2fd72212ad372bd1ee4fd8d9d"
-    },
-    "icons/studio.svg": {
-      "bytes": 325,
-      "gitSha": "8575e53b88da7d18b7d9323eaace4da54b76661f"
-    },
-    "icons/studio-180.png": {
-      "bytes": 1444,
-      "gitSha": "8de5acf9dbca48d4acb52b06483d7281b2ce5224"
-    },
-    "icons/studio-192.png": {
-      "bytes": 1429,
-      "gitSha": "6c56572e9a996842df412ed136aa0d6ac59dada4"
-    },
-    "icons/studio-512.png": {
-      "bytes": 4124,
-      "gitSha": "ec1fce51ddad7b0ceeed6b372d333331dea68a5a"
-    }
+    ".nojekyll": {"bytes": 28, "gitSha": "e06f24b89ab0b6262756bf36bb72c02fd24b0607"},
+    "index.html": {"bytes": 2111, "gitSha": "8ac44feca3c0e060da5c993b97619de91c4591c5"},
+    "manifest.webmanifest": {"bytes": 706, "gitSha": "8071d1c1830c4adc4d82b1fee27ee513f3a0ddf8"},
+    "sw.js": {"bytes": 1837, "gitSha": "70b7f445d3ab2e0bf2b6528b984214e3377a913c"},
+    "controle.html": {"bytes": 3355, "gitSha": "6769169b3b73f6d1538214afcd84105cbd48f25e"},
+    "assets/studio.css": {"bytes": 30168, "gitSha": "19c779ca457027ebb3cdfc78d17979c191f12b68"},
+    "assets/atlas.css": {"bytes": 1931, "gitSha": "98eabdca560275b0614eef2f56d4b7c2570505ea"},
+    "assets/engine.js": {"bytes": 14472, "gitSha": "53e621fa6dde309ca7b8a4f29623447b927d8d7e"},
+    "assets/studio-art.js": {"bytes": 8485, "gitSha": "01c4efebd30436e005e9595613acaabd1b107135"},
+    "assets/atlas-art.js": {"bytes": 18958, "gitSha": "8a614168facaef8a80c4736b47c3b49edc955ef0"},
+    "assets/studio.js": {"bytes": 38766, "gitSha": "543889e851623ac21f95225b8664f852194bc933"},
+    "icons/studio.svg": {"bytes": 2571, "gitSha": "9a17d1b0c2d976884700c2c8befbdc442f1042c1"},
+    "icons/studio-180.png": {"bytes": 22665, "gitSha": "13dac4d40bf4782fc1981b652ef8687d8d1a96f3"},
+    "icons/studio-192.png": {"bytes": 23575, "gitSha": "e36707b9bc64ce16892d9428409b4bc6375e3090"},
+    "icons/studio-512.png": {"bytes": 77150, "gitSha": "d0b00fe76ce5966083a71ddb236cc3bf6f865063"}
   }
 }
