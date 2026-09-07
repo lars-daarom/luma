@@ -91,7 +91,7 @@ function setPageClass(name){doc.body.dataset.journeyPage=name||'';}
 function redesignHome(shell){
   if(shell.dataset.journey==='52')return;
   refresh();const f=frontier(state.completed),all=f===TOTAL;
-  const resume=state.resume,resumeCampaign=resume?.mode==='campaign'&&Number.isInteger(resume.id),resumeAny=Boolean(resume),id=resumeCampaign?resume.id:(all?TOTAL-1:f),w=Math.max(0,Math.min(5,Math.floor((resumeAny&&Number.isInteger(resume.world)?resume.world:id)/PER_WORLD))),t=worldData(w),done=Object.keys(state.completed).length;
+  const resume=state.resume,resumeCampaign=resume?.mode==='campaign'&&Number.isInteger(resume.id),resumeAny=Boolean(resume),id=resumeCampaign?resume.id:(all?TOTAL-1:f),w=Math.max(0,Math.min(5,resumeAny&&Number.isInteger(resume.world)?resume.world:Math.floor(id/PER_WORLD))),t=worldData(w),done=Object.keys(state.completed).length;
   shell.dataset.journey='52';shell.classList.add('journey-opening-shell');
   shell.innerHTML=`<section class="journey-opening" style="--journey-accent:${t.accent||'#CC5A43'}">
     <div class="journey-opening-scene">${scenery(w,'journey-opening-art')}</div>
