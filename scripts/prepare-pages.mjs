@@ -3,8 +3,8 @@ import {readFile,mkdir,copyFile,rm,lstat} from 'node:fs/promises';
 import {resolve,dirname,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
-export const VERSION='5.1.0';
-export const RUNTIME=['.nojekyll','index.html','manifest.webmanifest','sw.js','controle.html','assets/studio.css','assets/atlas.css','assets/engine.js','assets/studio-art.js','assets/atlas-art.js','assets/studio.js','icons/studio.svg','icons/studio-180.png','icons/studio-192.png','icons/studio-512.png'];
+export const VERSION='5.2.0';
+export const RUNTIME=['.nojekyll','index.html','manifest.webmanifest','sw.js','controle.html','assets/studio.css','assets/atlas.css','assets/journey.css','assets/engine.js','assets/studio-art.js','assets/atlas-art.js','assets/journey.js','assets/studio.js','icons/studio.svg','icons/studio-180.png','icons/studio-192.png','icons/studio-512.png'];
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 export function gitHash(bytes){return createHash('sha1').update(Buffer.from('blob '+bytes.length+'\0')).update(bytes).digest('hex');}
 export async function validate(root=ROOT){

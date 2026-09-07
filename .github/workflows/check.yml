@@ -1,7 +1,7 @@
 name: Controleer Luma
 on:
   push:
-    branches: [main, luma-5.1-worlds-and-identity]
+    branches: [main, luma-5.2-journey-map]
   pull_request:
   workflow_dispatch:
 permissions:
@@ -19,16 +19,17 @@ jobs:
           node --check assets/engine.js
           node --check assets/studio-art.js
           node --check assets/atlas-art.js
+          node --check assets/journey.js
           node --check assets/studio.js
           node --check sw.js
-      - name: Test puzzels, vormgeving en publicatie
+      - name: Test puzzels, voortgang en publicatie
         run: node --test tests/*.test.cjs
       - name: Verifieer de statische website
         run: node scripts/prepare-pages.mjs
       - name: Bewaar de gecontroleerde app
         uses: actions/upload-artifact@v4
         with:
-          name: luma-5.1-preview
+          name: luma-5.2-preview
           path: _site
           include-hidden-files: true
           retention-days: 5
