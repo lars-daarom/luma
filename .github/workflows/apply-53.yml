@@ -1,0 +1,40 @@
+name: Apply Luma 5.3 package
+on:
+  push:
+    branches: [luma-5.3-full-polish]
+    paths:
+      - '.github/workflows/apply-53.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: luma-5.3-full-polish
+          fetch-depth: 0
+      - name: Reconstruct checked package
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .luma53/chunk-00 .luma53/chunk-01 .luma53/chunk-02 .luma53/chunk-03a .luma53/chunk-03b .luma53/chunk-04 .luma53/chunk-05 > /tmp/luma53.b64
+          test "$(wc -c < /tmp/luma53.b64)" = "49616"
+          echo "055dabb79043a8bd5994cec4d0814c0f74c66e4b4b075564fbc6bfd955df70b3  /tmp/luma53.b64" | sha256sum -c -
+          base64 -d /tmp/luma53.b64 > /tmp/luma53.tar.gz
+          echo "6ca19dee890b0e5510a135017b6b4233753a79c1257ad292a4ff181a586118c5  /tmp/luma53.tar.gz" | sha256sum -c -
+          tar -tzf /tmp/luma53.tar.gz >/tmp/luma53-files.txt
+          cat /tmp/luma53-files.txt
+      - name: Apply Luma 5.3
+        shell: bash
+        run: |
+          set -euo pipefail
+          tar -xzf /tmp/luma53.tar.gz
+          rm -rf .luma53
+          rm -f .github/workflows/apply-53.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Luma 5.3: full visual polish"
+          git push origin HEAD:luma-5.3-full-polish
