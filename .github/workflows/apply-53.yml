@@ -26,15 +26,14 @@ jobs:
           echo "6ca19dee890b0e5510a135017b6b4233753a79c1257ad292a4ff181a586118c5  /tmp/luma53.tar.gz" | sha256sum -c -
           tar -tzf /tmp/luma53.tar.gz >/tmp/luma53-files.txt
           cat /tmp/luma53-files.txt
-      - name: Apply Luma 5.3
+      - name: Apply Luma 5.3 runtime
         shell: bash
         run: |
           set -euo pipefail
-          tar -xzf /tmp/luma53.tar.gz
+          tar -xzf /tmp/luma53.tar.gz --exclude='.github/workflows/check.yml'
           rm -rf .luma53
-          rm -f .github/workflows/apply-53.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Luma 5.3: full visual polish"
+          git commit -m "Luma 5.3: full visual polish runtime"
           git push origin HEAD:luma-5.3-full-polish
