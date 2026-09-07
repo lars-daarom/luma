@@ -1,6 +1,6 @@
-/* Luma 5.0.0: versioned, scope-local offline shell. No saved-game deletion. */
-const VERSION='5.0.0',CACHE='luma-v'+VERSION+'-pages-'+self.registration.scope;
-const FILES=['./index.html','./manifest.webmanifest?v=5.0.0','./assets/studio.css?v=5.0.0','./assets/engine.js?v=5.0.0','./assets/studio-art.js?v=5.0.0','./assets/studio.js?v=5.0.0','./icons/studio.svg?v=5.0.0','./icons/studio-180.png?v=5.0.0','./icons/studio-192.png?v=5.0.0','./icons/studio-512.png?v=5.0.0'];
+/* Luma 5.1.0: versioned, scope-local offline shell. No saved-game deletion. */
+const VERSION='5.1.0',CACHE='luma-v'+VERSION+'-pages-'+self.registration.scope;
+const FILES=['./index.html','./manifest.webmanifest?v=5.1.0','./assets/studio.css?v=5.1.0','./assets/atlas.css?v=5.1.0','./assets/engine.js?v=5.1.0','./assets/studio-art.js?v=5.1.0','./assets/atlas-art.js?v=5.1.0','./assets/studio.js?v=5.1.0','./icons/studio.svg?v=5.1.0','./icons/studio-180.png?v=5.1.0','./icons/studio-192.png?v=5.1.0','./icons/studio-512.png?v=5.1.0'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
 self.addEventListener('message',e=>{if(e.data?.type==='ACTIVATE')self.skipWaiting();});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('luma-')&&k.endsWith(self.registration.scope)&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
